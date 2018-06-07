@@ -1,0 +1,7 @@
+service\UserFacadeREST.class
+domain\Role.class
+domain\Kweet.class
+service\AbstractFacade.class
+service\ApplicationConfig.class
+service\KweetFacadeREST.class
+domain\User.class
