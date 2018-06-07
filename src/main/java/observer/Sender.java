@@ -15,6 +15,8 @@ import javax.jms.JMSException;
 import models.Objective;
 import com.google.gson.Gson;
 import enums.ObjectiveType;
+import java.util.ArrayList;
+import java.util.List;
 import javax.jms.*;
 
 /**
@@ -28,10 +30,11 @@ public class Sender {
         o.setId(1l);
         o.setObjectiveType(ObjectiveType.TWEETS_MADE);
         o.setObjectivePointsNeeded(1209349087247892354.0);
-        Sender.sendMessage(o);
+        List<Objective> objectives = new ArrayList<>();
+        Sender.sendMessage(objectives);
     }
     
-    public static void sendMessage(final Objective objective) {
+    public static void sendMessage(final List<Objective> objective) {
         try {
             ConnectionFactory connectionFactory = new ConnectionFactory();
             connectionFactory.setProperty(ConnectionConfiguration.imqAddressList, "localhost");

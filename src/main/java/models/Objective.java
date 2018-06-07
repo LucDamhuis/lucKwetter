@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.runefist.serversiteplus.shared.models;
+package models;
 
-import com.runefist.serversiteplus.shared.enums.ObjectiveType;
+import enums.ObjectiveType;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -34,7 +34,7 @@ public class Objective implements Serializable {
     private ObjectiveType objectiveType;
     
     @Column(unique = false, nullable = false)
-    private Double objectivePoints;
+    private Double objectivePointsNeeded;
 
     public Objective() {
     }
@@ -55,11 +55,11 @@ public class Objective implements Serializable {
         this.objectiveType = objectiveType;
     }
 
-    public Double getObjectivePoints() {
-        return objectivePoints;
+    public Double getObjectivePointsNeeded() {
+        return objectivePointsNeeded;
     }
 
-    public void setObjectivePoints(Double objectivePoints) {
-        this.objectivePoints = objectivePoints;
+    public void setObjectivePointsNeeded(Double objectivePointsNeeded) {
+        this.objectivePointsNeeded = objectivePointsNeeded;
     }
 }
